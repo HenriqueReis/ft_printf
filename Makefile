@@ -8,8 +8,6 @@ SRC = ft_printf.c ft_printf_utils.c
 
 OBJ = $(SRC:.c=.o)
 
-.PHONY:	all clean fclean re
-
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
@@ -26,6 +24,4 @@ fclean:
 
 re:	fclean all
 
-main: main.c $(NAME)
-	cc -g main.c -static ./$(NAME) -o $@
-	./main
+.PHONY:	all clean fclean re
